@@ -33,5 +33,5 @@
 
 body,html{
     font-size: 62.5%;
-    font-family: 'Montserrat', 'Pretendard', sans-serif;
+    font-family: 'Montserrat', 'Pretendard', sans-serif !important;
 }
