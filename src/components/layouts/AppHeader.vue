@@ -2,9 +2,9 @@
     <header>
         <div class="header-inner">
             <h1 class="logo">
-                <a href="/">PORTFOLIO
+                <router-link to="/" @click.native="router.go()">PORTFOLIO
                     <em>TAEYOONGO</em>
-                </a>
+                </router-link>
             </h1>
             <nav class="navi">
                 <ul>
@@ -31,12 +31,17 @@
 </template>
 
 <script setup>
+    import router from "@/router/index.js";
+
     function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({behavior: 'smooth'});
         }
     }
+
+
+
 
 
 
