@@ -1,6 +1,6 @@
 <template>
     <section class="ability-section">
-
+        <h3 style="font-size: 100px; color: #fff; ">Section2</h3>
     </section>
 </template>
 
