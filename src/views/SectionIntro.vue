@@ -3,7 +3,7 @@
         <article class="scene-data">
             <div class="word-outer">
                 <div class="word-inner">
-                    <div class="word-paragraph">
+                    <h3 class="word-paragraph top">
                         <span class="word">L</span>
                         <span class="word">e</span>
                         <span class="word">a</span>
@@ -15,9 +15,8 @@
                         <span class="word">d</span>
                         <span class="word">a</span>
                         <span class="word">y</span>
-
-                    </div>
-                    <div class="word-paragraph">
+                    </h3>
+                    <h4 class="word-paragraph">
                         <span class="word">U</span>
                         <span class="word">s</span>
                         <span class="word">e</span>
@@ -30,7 +29,7 @@
                         <span class="word">r</span>
                         <span class="word">o</span>
                         <span class="word">w</span>
-                    </div>
+                    </h4>
                 </div>
             </div>
         </article>
@@ -46,12 +45,7 @@
 </template>
 
 <script setup>
-import {onMounted} from 'vue'
-import {gsap} from "gsap";
 
-onMounted(() => {
-    gsap.to('.text', {});
-})
 
 
 </script>
@@ -61,7 +55,7 @@ onMounted(() => {
     height: 100vh;
     padding: 0 2.4rem;
     position: relative;
-    background-color: #444;
+    background-color: #000;
     .scene-data{
         height: 100%;
     }

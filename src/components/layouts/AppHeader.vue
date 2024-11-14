@@ -2,7 +2,7 @@
     <header>
         <div class="header-inner">
             <h1 class="logo">
-                <router-link to="/" @click.native="router.go()">PORTFOLIO
+                <router-link to="/" @click="router.go()">PORTFOLIO
                     <em>TAEYOONGO</em>
                 </router-link>
             </h1>

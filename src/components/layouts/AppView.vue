@@ -1,11 +1,5 @@
 <template>
-    <main>
-        <section-intro id="intro"/>
-        <section-challenge id="challenge"/>
-        <SectionAbility id="ability"/>
-        <section-portfolio id="portfolio"/>
-        <section-contact id="contact"/>
-    </main>
+
 </template>
 
 <script setup>
