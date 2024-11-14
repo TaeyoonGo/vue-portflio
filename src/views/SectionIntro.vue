@@ -32,6 +32,7 @@
                     </h4>
                 </div>
             </div>
+
         </article>
         <div class="scroll-down">
             <span class="text">SCROLL DOWN</span>
@@ -52,9 +53,10 @@
 
 <style lang="scss" scoped>
 .intro-section {
-    height: 100vh;
-    padding: 0 2.4rem;
     position: relative;
+    height: calc(100dvh - 7rem);
+    padding: 2.4rem;
+
     background-color: #000;
     .scene-data{
         height: 100%;
@@ -73,18 +75,18 @@
                     color: #fff;
                     line-height: 1.2;
                     font-weight: 700;
-                    font-size: 9rem;
+                    font-size: 12rem;
                 }
             }
         }
     }
     .scroll-down{
         position: absolute;
-        bottom: 8rem;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translateX(-50%);
         color: #fff;
         text-align: center;
+        bottom: 8rem;
         .text{
             font-weight: 700;
             font-size: 2.4rem;

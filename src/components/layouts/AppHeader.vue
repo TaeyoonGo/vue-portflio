@@ -12,7 +12,7 @@
                         <a @click="scrollToSection('intro')">INTRO</a>
                     </li>
                     <li>
-                        <a @click="scrollToSection('challenge')">CHALLENGE</a>
+                        <a @click="scrollToSection('character')">CHARACTER</a>
                     </li>
                     <li>
                         <a @click="scrollToSection('ability')">ABILITY</a>

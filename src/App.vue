@@ -2,7 +2,7 @@
     <app-header/>
     <main>
         <section-intro id="intro"/>
-        <section-challenge id="challenge"/>
+        <section-character id="character"/>
         <SectionAbility id="ability"/>
         <section-portfolio id="portfolio"/>
         <section-contact id="contact"/>
@@ -15,8 +15,8 @@ import {gsap} from "gsap";
 import AppFooter from "@/components/layouts/AppFooter.vue";
 import AppHeader from "@/components/layouts/AppHeader.vue";
 import SectionContact from "@/views/SectionContact.vue";
-import SectionChallenge from "@/views/SectionChallenge.vue";
 import SectionPortfolio from "@/views/SectionPortfolio.vue";
+import SectionCharacter from "@/views/SectionCharacter.vue";
 import SectionIntro from "@/views/SectionIntro.vue";
 import SectionAbility from "@/views/SectionAbility.vue";
 import {onMounted} from "vue";
@@ -46,7 +46,7 @@ function gsapSet(){
         .textEffect('h3 > .word')
         .textEffect('h4 > .word',{y:'random(-100,100)'})
         .from('header',{y: -100})
-        .from('.scroll-down',{y:100},"<")
+        .from('.scroll-down',{y:300,opacity:0},"<")
 }
 onMounted(()=>{
     gsapSet();
