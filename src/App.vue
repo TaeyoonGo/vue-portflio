@@ -159,7 +159,7 @@ const section5 = ref(null)
 function goto(refName) {
     let element = refName.value;
     /*
-    * 해당 리팩토링 진행 예정
+    * TODO : 해당 리팩토링 진행 예정
     * If문 진행으로 돌리는건 아닌거 같음
     * */
     if (refName === 'section1') {
