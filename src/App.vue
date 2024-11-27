@@ -157,11 +157,25 @@ const section4 = ref(null)
 const section5 = ref(null)
 
 function goto(refName) {
-    const element = section5.value;
+    let element = refName.value;
+    /*
+    * 해당 리팩토링 진행 예정
+    * If문 진행으로 돌리는건 아닌거 같음
+    * */
+    if (refName === 'section1') {
+        element = section1.value;
+    } else if (refName === 'section2') {
+        element = section2.value;
+    } else if (refName === 'section3') {
+        element = section3.value;
+    } else if (refName === 'section4') {
+        element = section4.value;
+    } else if (refName === 'section5') {
+        element = section5.value;
+    }
     if (element) {
         element.scrollIntoView({behavior: 'smooth'});
     }
-
 }
 onMounted(() => {
     textEffect();
