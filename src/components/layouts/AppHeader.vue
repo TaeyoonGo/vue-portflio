@@ -9,19 +9,19 @@
             <nav class="navi">
                 <ul>
                     <li>
-                        <a @click="scrollToSection('intro')">INTRO</a>
+                        <a @click="scrollTo('sec1')">INTRO</a>
                     </li>
                     <li>
-                        <a @click="scrollToSection('character')">CHARACTER</a>
+                        <a @click="scrollTo('sec2')">CHARACTER</a>
                     </li>
                     <li>
-                        <a @click="scrollToSection('ability')">ABILITY</a>
+                        <a @click="scrollTo('sec3')">ABILITY</a>
                     </li>
                     <li>
-                        <a @click="scrollToSection('portfolio')">PORTFOLIO</a>
+                        <a @click="scrollTo('sec4')">PORTFOLIO</a>
                     </li>
                     <li>
-                        <a @click="scrollToSection('contact')">CONTACT</a>
+                        <a @click="scrollTo('sec5')">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -33,18 +33,12 @@
 <script setup>
     import router from "@/router/index.js";
 
-    function scrollToSection(sectionId) {
+    function scrollTo(sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({behavior: 'smooth'});
         }
     }
-
-
-
-
-
-
 </script>
 
 <style lang="scss" scoped>
