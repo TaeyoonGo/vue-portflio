@@ -1,8 +1,10 @@
 <template>
     <div class="cursor" ref="cursor"></div>
-    <app-header />
+    <app-header
+        @scrollTo="goto"
+    />
     <main>
-        <section ref="sec1" class="intro-section">
+        <section ref="section1" class="intro-section">
             <article class="scene-data">
                 <div class="word-outer">
                     <div class="word-inner">
@@ -46,7 +48,7 @@
                 />
             </div>
         </section>
-        <section ref="sec2" class="character-section">
+        <section ref="section2" class="character-section">
             <article class="character-inner">
                 <div class="title-box">
                     <h3 class="title">Character</h3>
@@ -72,7 +74,7 @@
             </article>
 
         </section>
-        <section ref="sec3" class="ability-section">
+        <section ref="section3" class="ability-section">
             <h3 style="font-size: 100px; color: #fff; ">Section2</h3>
             <ul>
                 <li><span>HTML</span></li>
@@ -90,10 +92,10 @@
                 <li><span>GIT</span></li>
             </ul>
         </section>
-        <section ref="sec4" class="portfolio-section">
+        <section ref="section4" class="portfolio-section">
             <h3 style="font-size: 100px; color: #fff; ">Section3</h3>
         </section>
-        <section ref="sec5" class="contact-section">
+        <section ref="section5" class="contact-section">
         <span class="badge">
             Do You Like Me?
         </span>
@@ -108,8 +110,7 @@ import {gsap} from "gsap";
 import AppFooter from "@/components/layouts/AppFooter.vue";
 import AppHeader from "@/components/layouts/AppHeader.vue";
 // gsap.registerPlugin(ScrollTrigger);
-
-import {onMounted, ref} from "vue";
+import {onMounted, ref } from "vue";
 
 function textEffect() {
     gsap.registerEffect({
@@ -137,7 +138,7 @@ function textEffect() {
         .from('.scroll-down', {y: '100', opacity: 0}, "<")
 }
 
-const cursor = ref();
+const cursor = ref(null);
 function cursorEffect() {
     gsap.set(cursor.value,{autoAlpha:0})
     let xTo = gsap.quickTo(cursor.value, "x", {duration: 0.4, ease: "power3"});
@@ -149,21 +150,23 @@ function cursorEffect() {
     })
 }
 
+const section1 = ref(null)
+const section2 = ref(null)
+const section3 = ref(null)
+const section4 = ref(null)
+const section5 = ref(null)
 
-const section = ref();
 function goto(refName) {
-    const element = this.$refs[refName];
-    const top = element.offsetTop;
-    window.scrollIntoView({behavior: 'smooth'});
+    const element = section5.value;
+    if (element) {
+        element.scrollIntoView({behavior: 'smooth'});
+    }
+
 }
-
-
 onMounted(() => {
     textEffect();
     cursorEffect();
 })
-
-
 </script>
 
 <style lang="scss" scoped>
